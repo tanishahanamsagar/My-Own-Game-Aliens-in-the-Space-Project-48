@@ -175,8 +175,13 @@ function draw() {
     if (shoot1Group.isTouching(Eship)) {
         gameOver.visible = true
 
-        bg2.visible = true
+
         shoot1Group.setVelocityYEach(0);
+    }
+    if (shoot2Group.isTouching(Aship)) {
+        gameOver.visible = true
+
+        shoot2Group.setVelocityYEach(0);
     }
     drawSprites();
     text("Score: " + score, 1300, 50);
